@@ -242,6 +242,10 @@ function TopMenu({
         <meta property="twitter:description" content={desc}></meta>
         <meta property="twitter:image" content={image}></meta>
         <meta name="theme-color" content="#cd0c0d" />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-3431456264566520"
+        ></meta>
 
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <meta
