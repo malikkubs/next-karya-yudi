@@ -15,6 +15,18 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     <priority>1.0</priority>
     <lastmod>2022-11-03T03:16:20.318Z</lastmod>
   </url>
+  <url>
+    <loc>https://karyayudi.my.id/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2022-11-03T03:16:20.318Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gassaky.karyayudi.my.id/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2022-11-03T03:16:20.318Z</lastmod>
+  </url>
 </urlset>`);
     res.end();
   }
