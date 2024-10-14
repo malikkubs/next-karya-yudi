@@ -256,6 +256,12 @@ function TopMenu({
           name="viewport"
           content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"
         />
+
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <div className="overflow-clip">
         <MenuDarg />
