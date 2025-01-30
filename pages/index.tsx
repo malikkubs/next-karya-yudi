@@ -13,7 +13,7 @@ import * as ga from "../utils/google_analitycs";
 
 interface DatDqwertya2 {
   [key: string]: any;
-  // logo: string;
+  // logo: string; penambahan edit akun
 }
 interface Data {
   [key: string]: any;
