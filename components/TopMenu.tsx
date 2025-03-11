@@ -23,6 +23,9 @@ function TopMenu({
         <meta name="description" content={desc}></meta>
 
         <meta property="og:type" content={ogtype}></meta>
+
+        <link rel="canonical" href="https://karyayudi.my.id" />
+
         <meta
           property="og:url"
           content={"https://karyayudi.vercel.app/"}
