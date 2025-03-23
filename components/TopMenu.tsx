@@ -2,6 +2,7 @@ import Head from "next/head";
 import * as ga from "../utils/google_analitycs";
 import { useState } from "react";
 import router from "next/router";
+import Footer from "./Footer";
 
 function TopMenu({
   ogtype = "Presonal Profile",
@@ -283,7 +284,7 @@ function TopMenu({
           
         </div> */}
         <div className={`bg-red02 w-full flex fixed z-50`}>
-          <div className="container h-16 mx-4 lg:mx-auto flex-row flex justify-between items-center">
+          <div className="container h-16 mx-4 lg:mx-auto w-11/12 flex-row flex justify-between items-center">
             <div className="flex items-center justify-center">
               <div className="hidden lg:flex">
                 <img
@@ -395,6 +396,8 @@ function TopMenu({
           </div>
         </div>
         <div className="">{children}</div>
+
+        <Footer />
       </div>
     </>
   );

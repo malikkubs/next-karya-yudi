@@ -1,32 +1,82 @@
-import { GetServerSideProps } from "next";
-const Sitemap = () => {};
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  let page = 1;
-  let listing = [];
-  let done = false;
+import APINew from "../utils/Api";
 
+const Sitemap = () => {
+  // The component itself doesn't render anything
+  return null;
+};
+
+export default Sitemap;
+
+export async function getServerSideProps({ res }) {
+  const BASE_URL = "https://karyayudi.my.id";
+
+  const response = await APINew.get("/gassa-ky/tutorial", {});
+  const pages = response?.data?.list_artikel || [];
+
+  // Fetch your site's URLs; this could be from an API, database, etc.
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>${BASE_URL}</loc>
+      <priority>1.0</priority>
+    </url>
+    ${pages
+      ?.map(({ slug, created_at }) => {
+        return `
+          <url>
+            <loc>${BASE_URL}/blog/${slug}</loc>
+            <lastmod>${created_at}</lastmod>
+          </url>
+        `;
+      })
+      .join("")}
+  </urlset>`;
+
+  res.setHeader("Content-Type", "application/xml");
+  res.write(sitemap);
+  res.end();
+
+  return {
+    props: {},
+  };
+}
+
+async function handler({ res }) {
+  // const pages = await getAllPages();
+
+  const baseUrl = "https://karyayudi.my.id";
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>${baseUrl}</loc>
+      <priority>1.0</priority>
+    </url>
+  </urlset>`;
   if (res) {
-    res.setHeader("Content-Type", "text/xml");
-    res.write(`
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>https://karyayudi.my.id/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <lastmod>2022-11-03T03:16:20.318Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gassaky.karyayudi.my.id/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <lastmod>2022-11-03T03:16:20.318Z</lastmod>
-  </url>
-</urlset>`);
-    res.end();
+    res.setHeader("Content-Type", "application/xml");
+    res.write(sitemap);
+    res.status(200).send(sitemap);
   }
   return {
     props: {},
   };
-};
-export default Sitemap;
+}
+async function getAllPages() {
+  try {
+    const response = await APINew.get("/gassa-ky/tutorial", {});
+    const pages = response?.data?.list_artikel || [];
+
+    // Proses data halaman sesuai kebutuhan Anda
+    // Misalnya, ekstrak rute dari data halaman
+    // const routes = pages.map((page) => page);
+    return {
+      props: { pages },
+    };
+  } catch (error) {
+    console.error("Error fetching pages:", error);
+    return {
+      props: { pages: [] },
+    };
+  }
+}

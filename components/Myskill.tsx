@@ -41,7 +41,7 @@ function MySkill({ data }) {
     data_tutrial();
   }, []);
   return (
-    <div className="w-full container mx-auto pt-16">
+    <div className="w-full container lg:mx-auto lg:w-11/12 pt-16">
       <div className="w-full py-6 lg:py-4 flex flex-col h-full">
         <div className="h-full min-h-screen">
           <p className=" text-center p-3 text-4xl font-bold">Blog</p>

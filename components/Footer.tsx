@@ -3,7 +3,7 @@ import Image from "next/image";
 function Footer() {
   return (
     <div className="bg-red02 flex  w-full">
-      <div className="container h-16 w-full  mx-4 lg:mx-auto flex-row flex justify-between items-center">
+      <div className="container h-16 w-full  mx-4 lg:mx-auto lg:w-11/12 flex-row flex justify-between items-center">
         <div className="flex flex-row justify-between w-full items-center">
           <div
             onClick={() => window.open("https://wa.me/+628971675097")}

@@ -78,7 +78,6 @@ function ContactMe() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

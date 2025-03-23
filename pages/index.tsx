@@ -101,7 +101,7 @@ function Home() {
         <div className="w-full  scroll-smooth ">
           <section
             id="home"
-            className="container px-4 md:px-4 mx-0 lg:px-0 lg:mx-auto"
+            className="container px-4 md:px-4 mx-0 w-full lg:w-11/12 lg:px-0 lg:mx-auto"
           >
             <div className="w-full h-screen  justify-center  bg-putih lg:bg-none bg-red-300 flex flex-col sm:flex-row pt-16 overflow-hidden">
               <div className="w-full lg:w-1/2  flex items-center">
@@ -149,50 +149,48 @@ function Home() {
             <MySkill data={dataHome[0].myskill} />
           </section>
           <section id="myprojects" className="bg-japan-wave ">
-            <div className="w-full container mx-auto pt-16">
+            <div className="w-full container mx-auto lg:w-11/12 pt-16">
               <div className="py-6 lg:py-4 h-full">
-                <div className="bg-red02-09 w-full h-full shadow-2xl relative rounded-2xl">
-                  <div className="h-full flex flex-col">
-                    <div className="w-full h-full flex flex-col  ">
-                      <p className="text-putih text-center p-3 text-4xl font-bold">
-                        My Project
-                      </p>
+                <div className="h-full flex flex-col">
+                  <div className="w-full h-full flex flex-col  ">
+                    <p className="text-putih text-center p-3 text-4xl font-bold">
+                      My Project
+                    </p>
 
-                      <div className="w-full h-full hid  overflow-y-auto">
-                        <div className="flex flex-wrap">
-                          {dataHome[0]?.myprojects?.map((data, index) => (
-                            <div
+                    <div className="w-full h-full hid  overflow-y-auto">
+                      <div className="flex flex-wrap">
+                        {dataHome[0]?.myprojects?.map((data, index) => (
+                          <div
+                            key={index}
+                            className="p-2 lg:p-3 w-1/2 lg:w-1/4"
+                            onClick={() => dataDetailOpen(index)}
+                          >
+                            <CardProjects
                               key={index}
-                              className="p-3  w-1/2 lg:w-1/4"
-                              onClick={() => dataDetailOpen(index)}
-                            >
-                              <CardProjects
-                                key={index}
-                                title={data.nameProject}
-                                status={data.status}
-                                logo={data.logo}
-                              />
-                            </div>
-                          ))}
-                        </div>
+                              title={data.nameProject}
+                              status={data.status}
+                              logo={data.logo}
+                            />
+                          </div>
+                        ))}
                       </div>
-                      <div className="flex py-3 px-3">
-                        <Button
-                          onClick={() => {
-                            ga.EvenClickMenuApp("Button Contact Me");
-                          }}
-                          text="Contact Me"
-                          href={"/#contact-me"}
-                        />
-                        <div className="w-4" />
-                        <Button2
-                          text="Hire Me"
-                          href={() => {
-                            ga.EvenClickMenuApp("Button Hire Me");
-                            window.open("https://wa.me/+628971675097");
-                          }}
-                        />
-                      </div>
+                    </div>
+                    <div className="flex py-3 px-3">
+                      <Button
+                        onClick={() => {
+                          ga.EvenClickMenuApp("Button Contact Me");
+                        }}
+                        text="Contact Me"
+                        href={"/#contact-me"}
+                      />
+                      <div className="w-4" />
+                      <Button2
+                        text="Hire Me"
+                        href={() => {
+                          ga.EvenClickMenuApp("Button Hire Me");
+                          window.open("https://wa.me/+628971675097");
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
