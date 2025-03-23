@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Prism from "prismjs";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+
 import APINew from "../../utils/Api";
 import dayjs from "dayjs";
 import TopMenu from "../../components/TopMenu";
@@ -19,7 +23,40 @@ export default function blog() {
         console.log("====================================");
       });
   }
+  function addCopyButtons() {
+    const codeBlocks = document.querySelectorAll("pre");
+
+    codeBlocks.forEach((block) => {
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("code-container");
+
+      const button = document.createElement("button");
+      button.classList.add("copy-btn");
+      button.innerText = "Copy";
+
+      block.parentNode.replaceChild(wrapper, block);
+      wrapper.appendChild(block);
+      wrapper.appendChild(button);
+
+      button.addEventListener("click", () => copyCode(block, button));
+    });
+  }
+
+  function copyCode(block, button) {
+    const code = block.innerText;
+
+    navigator.clipboard
+      .writeText(code)
+      .then(() => {
+        button.innerText = "Copied!";
+        setTimeout(() => (button.innerText = "Copy"), 1500);
+      })
+      .catch((err) => console.error("Failed to copy code: ", err));
+  }
+
   useEffect(() => {
+    Prism.highlightAll();
+    addCopyButtons();
     if (slug) {
       data_tutrial(slug);
     }
