@@ -1,5 +1,6 @@
 import Axios from "axios";
 import Cookies from "js-cookie";
+import { HOSTNAME } from "../services/environments";
 
 interface IApi {
   post: (url: string, body?: object, config?: object) => any;
@@ -16,7 +17,7 @@ const APINew: IApi = {
 };
 
 const Call = (url, body, config, method) => {
-  const url1 = `https://api.karyayudi.my.id/api${url}`;
+  const url1 = `${process.env.NEXT_PUBLIC_HOST}${url}`;
   // const [Err, setErr] = useGlobal("Err");
   const token = Cookies.get("token");
   config.headers = {

@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import MenuDarg from "./MenuDrag";
 import * as ga from "../utils/google_analitycs";
 import { useState } from "react";
+import router from "next/router";
 
 function TopMenu({
   ogtype = "Presonal Profile",
@@ -14,8 +12,6 @@ function TopMenu({
   keywords = "yudian, malik, yudian malik, yudi, karya yudi, next karya yudi, karyayudi.id, pemrograman, laravel, nextjs, reactjs, tailwind, petugas partai,",
   children,
 }: any) {
-  const router = useRouter();
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => setIsOpen(!isOpen);

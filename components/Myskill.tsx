@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Button, { Button2 } from "./Button";
 import * as ga from "../utils/google_analitycs";
-import APINew from "../utils/Api";
 import { useEffect, useState } from "react";
+import APINew from "../utils/Api";
 
 function MySkill({ data }) {
   const [data_a, setData_a] = useState([]);
@@ -49,6 +49,7 @@ function MySkill({ data }) {
             {data_a.map((data, i) => (
               <div key={i} className="p-4 w-full md:w-1/2 lg:w-1/3 ">
                 <Card
+                  href={`/blog/${data.slug}`}
                   text={data.title}
                   desc={cleanContent(data.article)}
                   img={data.thumbnail}
@@ -61,13 +62,15 @@ function MySkill({ data }) {
     </div>
   );
 }
-function Card({ text, desc, img }) {
+function Card({ text, desc, img, href }) {
   return (
-    <div className=" flex-col  p-3 rounded-md flex  border-red border-2 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-      <img className="aspect-square object-cover h-28" src={img} />
-      <h3 className="text-xl font-bold text-red02 line-clamp-2 ">{text}</h3>
-      <p className=" " dangerouslySetInnerHTML={{ __html: desc }} />
-    </div>
+    <a href={href}>
+      <div className=" flex-col  p-3 rounded-md flex  border-red border-2 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+        <img className="aspect-square object-cover h-28" src={img} />
+        <h3 className="text-xl font-bold text-red02 line-clamp-2 ">{text}</h3>
+        <p className=" " dangerouslySetInnerHTML={{ __html: desc }} />
+      </div>
+    </a>
   );
 }
 
