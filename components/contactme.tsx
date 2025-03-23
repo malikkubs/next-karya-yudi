@@ -4,7 +4,7 @@ import * as ga from "../utils/google_analitycs";
 
 function ContactMe() {
   return (
-    <div className="w-full h-screen flex flex-col  pt-16 pb-60px ">
+    <div className="w-full bg-white flex flex-col  ">
       <div className="py-4 h-terakhir container mx-auto">
         <div className="bg-putih w-full h-full shadow-2xl relative rounded-2xl overflow-hidden">
           <div className="w-full h-full absolute z-20 flex flex-col justify-center items-center">

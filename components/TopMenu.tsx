@@ -15,6 +15,11 @@ function TopMenu({
   children,
 }: any) {
   const router = useRouter();
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDrawer = () => setIsOpen(!isOpen);
+
   return (
     <>
       <Head>
@@ -265,24 +270,41 @@ function TopMenu({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
           crossOrigin="anonymous"
         ></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
-     crossOrigin="anonymous"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
-     crossOrigin="anonymous"></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
+          crossOrigin="anonymous"
+        ></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <div className="overflow-clip">
-        <MenuDarg />
+        {/* <MenuDarg /> */}
         {/* <div style={{ zIndex: "9" }} className="absolute inset-0 ">
           
         </div> */}
         <div className={`bg-red02 w-full flex fixed z-50`}>
           <div className="container h-16 mx-4 lg:mx-auto flex-row flex justify-between items-center">
             <div className="flex items-center justify-center">
-              <img
-                onClick={() => router.push("/")}
-                src="/logo.svg"
-                alt="ini logo bertulisan yudian"
-              />
+              <div className="hidden lg:flex">
+                <img
+                  onClick={() => router.push("/")}
+                  src="/logo.svg"
+                  alt="ini logo bertulisan yudian"
+                />
+              </div>
+              <div className="md:hidden">
+                <button onClick={toggleDrawer}>
+                  {isOpen ? (
+                    <img src="/menu.svg" alt="menu" />
+                  ) : (
+                    <img src="/menu.svg" alt="menu" />
+                  )}
+                </button>
+              </div>
             </div>
             <div className="flex-row hidden md:flex">
               <MenuList
@@ -292,19 +314,13 @@ function TopMenu({
                 nameMenu="Home"
                 href="/#home"
               />
-              <MenuList
-                onClick={() => {
-                  ga.EvenClick("/#about-me");
-                }}
-                nameMenu="About Me"
-                href="/#about-me"
-              />
+
               <MenuList
                 onClick={() => {
                   ga.EvenClick("/#myskill");
                 }}
-                nameMenu="My Skill"
-                href="/#myskill"
+                nameMenu="Blog"
+                href="/#blog"
               />
               <MenuList
                 onClick={() => {
@@ -315,10 +331,69 @@ function TopMenu({
               />
               <MenuList
                 onClick={() => {
-                  ga.EvenClick("/#contact-me");
+                  ga.EvenClick("/#about-me");
                 }}
-                nameMenu="Contact Me"
-                href="/#contact-me"
+                nameMenu="About Me"
+                href="/#about-me"
+              />
+              <MenuList
+                onClick={() => {
+                  ga.EvenClick("GassaKy");
+                }}
+                nameMenu="GassaKy"
+                href="https://gassaky.web.id/"
+              />
+            </div>
+          </div>
+
+          <div
+            className={`fixed top-0 left-0 w-64 h-full bg-red02 shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+              isOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <div className="p-4 border-b flex justify-between items-center">
+              <h2 className="text-lg font-semibold text-white">Menu</h2>
+              <button onClick={toggleDrawer}>
+                <img src="/menu.svg" alt="menu" />
+              </button>
+            </div>
+            <div className="flex flex-col gap-4">
+              <MenuList
+                onClick={() => {
+                  ga.EvenClick("/#home");
+                  toggleDrawer();
+                }}
+                nameMenu="Home"
+                href="/#home"
+              />
+              <MenuList
+                onClick={() => {
+                  ga.EvenClick("/#blog");
+                  toggleDrawer();
+                }}
+                nameMenu="Blog"
+                href="/#blog"
+              />
+              <MenuList
+                onClick={() => {
+                  ga.EvenClick("/#myprojects");
+                  toggleDrawer();
+                }}
+                nameMenu="My Projects"
+                href="/#myprojects"
+              />
+              <MenuList
+                onClick={() => {
+                  ga.EvenClick("/#about-me");
+                  toggleDrawer();
+                }}
+                nameMenu="About Me"
+                href="/#about-me"
+              />
+              <MenuList
+                onClick={() => ga.EvenClick("GassaKy")}
+                nameMenu="GassaKy"
+                href="https://gassaky.web.id/"
               />
             </div>
           </div>

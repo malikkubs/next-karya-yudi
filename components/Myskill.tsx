@@ -1,47 +1,72 @@
 import Image from "next/image";
 import Button, { Button2 } from "./Button";
 import * as ga from "../utils/google_analitycs";
+import APINew from "../utils/Api";
+import { useEffect, useState } from "react";
 
 function MySkill({ data }) {
-  return (
-    <div className="w-full h-s  lg:h-screen  container mx-auto pt-16">
-      <div className="w-full py-6 lg:py-4 flex flex-col h-full">
-        <p className="text-red02 text-center text-4xl font-bold">My Skill</p>
+  const [data_a, setData_a] = useState([]);
+  function data_tutrial() {
+    APINew.get("/gassa-ky/tutorial", {})
+      .then((res) => {
+        setData_a(res.data.list_artikel);
+        console.log(`jala ye ${res.data.list_artikel}`);
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log("====================================");
+      });
+  }
 
-        <div className="h-full overflow-y-auto hidq">
+  // Fungsi untuk membersihkan konten
+  const cleanContent = (content) => {
+    // Hapus <img>, <iframe>, <video> pakai regex
+    const cleaned = content?.replace(
+      /<img[^>]*>|<iframe[^>]*>.*?<\/iframe>|<video[^>]*>.*?<\/video>/gi,
+      ""
+    );
+
+    // Hapus semua tag HTML yang tersisa
+    const stripped = cleaned?.replace(/<\/?[^>]+(>|$)/g, "");
+
+    // Potong jadi 50 kata dan tambahkan pesan subscribe
+    const words = stripped?.split(" ");
+    const shortDescription =
+      words?.length > 50 ? words?.slice(0, 20).join(" ") : stripped;
+
+    return shortDescription;
+  };
+
+  useEffect(() => {
+    data_tutrial();
+  }, []);
+  return (
+    <div className="w-full container mx-auto pt-16">
+      <div className="w-full py-6 lg:py-4 flex flex-col h-full">
+        <div className="h-full min-h-screen">
+          <p className=" text-center p-3 text-4xl font-bold">Blog</p>
           <div className="flex flex-wrap  mx-0 lg:-mx-4 ">
-            {data.map((data, i) => (
-              <div key={i} className="p-4 w-1/2 lg:w-1/3 ">
-                <Card text={data.title} />
+            {data_a.map((data, i) => (
+              <div key={i} className="p-4 w-full md:w-1/2 lg:w-1/3 ">
+                <Card
+                  text={data.title}
+                  desc={cleanContent(data.article)}
+                  img={data.thumbnail}
+                />
               </div>
             ))}
           </div>
-        </div>
-        <div className="flex py-3 px-3">
-          <Button
-            onClick={() => {
-              ga.EvenClickMenuApp("Button My Projects");
-            }}
-            text="My Projects"
-            href={"/#myprojects"}
-          />
-          <div className="w-4" />
-          <Button2
-            text="Hire Me"
-            href={() => {
-              ga.EvenClickMenuApp("Button Hire Me");
-              window.open("https://wa.me/+628971675097");
-            }}
-          />
         </div>
       </div>
     </div>
   );
 }
-function Card({ text }) {
+function Card({ text, desc, img }) {
   return (
-    <div className=" p-3 rounded-md flex text-center justify-center items-center h-20 border-red border-2">
-      <p className="text-2xl font-bold text-red02 text-center">{text}</p>
+    <div className=" flex-col  p-3 rounded-md flex  border-red border-2 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+      <img className="aspect-square object-cover h-28" src={img} />
+      <h3 className="text-xl font-bold text-red02 line-clamp-2 ">{text}</h3>
+      <p className=" " dangerouslySetInnerHTML={{ __html: desc }} />
     </div>
   );
 }

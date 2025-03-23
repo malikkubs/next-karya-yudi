@@ -98,12 +98,12 @@ function Home() {
         open={openDetail}
       />
       <TopMenu>
-        <div className="w-full h-screen overflow-hidden scroll-smooth ">
+        <div className="w-full  scroll-smooth ">
           <section
             id="home"
             className="container px-4 md:px-4 mx-0 lg:px-0 lg:mx-auto"
           >
-            <div className="w-full h-s  lg:h-screen  justify-center  bg-putih lg:bg-none bg-red-300 flex flex-col sm:flex-row pt-16 overflow-hidden">
+            <div className="w-full h-screen  justify-center  bg-putih lg:bg-none bg-red-300 flex flex-col sm:flex-row pt-16 overflow-hidden">
               <div className="w-full lg:w-1/2  flex items-center">
                 <div
                   style={{ paddingBottom: "100%" }}
@@ -145,14 +145,11 @@ function Home() {
               </div>
             </div>
           </section>
-          <section id="about-me" className="bg-megamendung">
-            <Abaout body={parse(replaceFonts(dataHome[0]?.abaout))} />
-          </section>
-          <section id="myskill" className="bg-white">
+          <section id="blog" className="bg-white">
             <MySkill data={dataHome[0].myskill} />
           </section>
           <section id="myprojects" className="bg-japan-wave ">
-            <div className="w-full h-s  lg:h-screen  container mx-auto pt-16">
+            <div className="w-full container mx-auto pt-16">
               <div className="py-6 lg:py-4 h-full">
                 <div className="bg-red02-09 w-full h-full shadow-2xl relative rounded-2xl">
                   <div className="h-full flex flex-col">
@@ -203,7 +200,8 @@ function Home() {
             </div>
           </section>
 
-          <section id="contact-me">
+          <section id="about-me" className="bg-white">
+            <Abaout body={parse(replaceFonts(dataHome[0]?.abaout))} />
             <ContactMe />
           </section>
         </div>
