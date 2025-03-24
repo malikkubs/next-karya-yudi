@@ -7,7 +7,7 @@ function ContactMe() {
     <div className="w-full bg-white flex flex-col  ">
       <div className="py-4 h-terakhir container mx-auto">
         <div className="bg-putih w-full h-full shadow-2xl relative rounded-2xl overflow-hidden">
-          <div className="w-full h-full absolute z-20 flex flex-col justify-center items-center">
+          <div className="w-full h-full absolute z-20 px-4 flex flex-col justify-center items-center">
             <p className="text-red02 text-center text-4xl font-bold">
               Contact Me
             </p>
@@ -50,7 +50,7 @@ function ContactMe() {
                   src="/ig-red.svg"
                   link={() => {
                     window.open(
-                      "https://www.instagram.com/yudian_nanda_malik/"
+                      "https://www.instagram.com/yudian_malik/"
                     );
                     ga.EvenClickButton("Button to Instagram");
                   }}
