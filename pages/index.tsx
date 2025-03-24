@@ -111,7 +111,7 @@ function Home() {
                 >
                   <Image
                     className="w-full h-full absolute bg-red inset-0 object-contain rounded-full"
-                    src={"/foto.png"}
+                    src={"/file.png"}
                     layout="fill"
                     alt="seoarang sedang menunjukan kedua ibu jari tanganya"
                   />

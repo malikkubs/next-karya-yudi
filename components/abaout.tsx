@@ -28,7 +28,7 @@ function Abaout({ body }: any) {
           <div className="foto relative hidden lg:flex">
             <Image
               className="w-full h-full object-cover absolute inset-0 z-0"
-              src="/foto.png"
+              src="/file.png"
               layout="fill"
               alt="seoarang sedang menunjukan kedua ibu jari tanganya"
             />
