@@ -4,7 +4,7 @@ import * as ga from "../utils/google_analitycs";
 
 function Abaout({ body }: any) {
   return (
-    <div className="w-full container mx-auto pt-16">
+    <div className="w-full h-screen container lg:w-11/12 mx-auto pt-16">
       <div className="py-6 lg:py-4 h-full">
         <div className="h-full p-0 lg:pr-8 flex items-center justify-between flex-row">
           <div className="w-full lg:w-2/3 h-full flex flex-col p-4">

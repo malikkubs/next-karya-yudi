@@ -5,7 +5,7 @@ import * as ga from "../utils/google_analitycs";
 function ContactMe() {
   return (
     <div className="w-full bg-white flex flex-col  ">
-      <div className="py-4 h-terakhir container mx-auto">
+      <div className="py-4 px-4 h-terakhir container mx-auto">
         <div className="bg-putih w-full h-full shadow-2xl relative rounded-2xl overflow-hidden">
           <div className="w-full h-full absolute z-20 px-4 flex flex-col justify-center items-center">
             <p className="text-red02 text-center text-4xl font-bold">
@@ -49,12 +49,10 @@ function ContactMe() {
                   label="Instagram"
                   src="/ig-red.svg"
                   link={() => {
-                    window.open(
-                      "https://www.instagram.com/yudian_malik/"
-                    );
+                    window.open("https://www.instagram.com/yudian_malik/");
                     ga.EvenClickButton("Button to Instagram");
                   }}
-                  text="yudian_nanda_malik"
+                  text="yudian_malik"
                 />
                 {/* <IconCard label="Email" /> */}
               </div>

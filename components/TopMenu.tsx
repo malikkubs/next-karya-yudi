@@ -277,6 +277,13 @@ function TopMenu({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
           crossOrigin="anonymous"
         ></script>
+
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+          rel="stylesheet"
+        ></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
       </Head>
       <div className="overflow-clip">
         {/* <MenuDarg /> */}

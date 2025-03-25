@@ -21,13 +21,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
-          <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
-            rel="stylesheet"
-          ></link>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
         </body>
       </Html>
     );

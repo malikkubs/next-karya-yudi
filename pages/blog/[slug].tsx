@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Prism from "prismjs";
-import "prismjs/components/prism-clike";
+import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-dart";
 
 import APINew from "../../utils/Api";
 import dayjs from "dayjs";
@@ -53,10 +54,12 @@ export default function blog() {
       })
       .catch((err) => console.error("Failed to copy code: ", err));
   }
-
   useEffect(() => {
     Prism.highlightAll();
     addCopyButtons();
+  }, [data_a]);
+
+  useEffect(() => {
     if (slug) {
       data_tutrial(slug);
     }
@@ -76,7 +79,8 @@ export default function blog() {
               <b>{data_a?.user?.name?.toUpperCase()}</b>
             </h3>
             <p className="m-0">
-              {dayjs(data_a?.created_at).format("ddd DD MMM YYYY")}
+              {data_a?.created_at &&
+                dayjs(data_a?.created_at).format("ddd DD MMM YYYY")}
             </p>
             <h2>{data_a?.title}</h2>
             <article
@@ -86,7 +90,7 @@ export default function blog() {
           </div>
         ) : (
           <div className="flex justify-center items-center h-screen">
-            <div className="loader"></div>
+            {/* <div className="loader"></div> */}
           </div>
         )}
       </div>
