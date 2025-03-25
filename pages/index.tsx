@@ -136,9 +136,9 @@ function Home() {
                   <div id="gap" className="h-6" />
                   <Button
                     onClick={() => {
-                      ga.EvenClickMenuApp("Button Aboute Me");
+                      ga.EvenClickMenuApp("Button Aboue Me");
                     }}
-                    text="Aboute Me"
+                    text="About Me"
                     href={"/#about-me"}
                   />
                 </div>
