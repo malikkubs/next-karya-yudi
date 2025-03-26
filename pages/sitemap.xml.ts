@@ -5,9 +5,9 @@ const Sitemap = () => {
   return null;
 };
 
-export Sitemap;
+export default Sitemap;
 
-export default async function getServerSideProps({ res }) {
+export async function getServerSideProps({ res }) {
   const BASE_URL = "https://karyayudi.my.id";
 
   const response = await APINew.get("/gassa-ky/tutorial", {});
