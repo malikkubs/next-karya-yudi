@@ -4,14 +4,14 @@ import * as ga from "../utils/google_analitycs";
 
 function Abaout({ body }: any) {
   return (
-    <div className="w-full h-screen container lg:w-11/12 mx-auto pt-16">
-      <div className="py-6 lg:py-4 h-full">
-        <div className="h-full p-0 lg:pr-8 flex items-center justify-between flex-row">
-          <div className="w-full lg:w-2/3 h-full flex flex-col p-4">
+    <div className="w-full h-auto lg:h-screen container lg:w-11/12 mx-auto pt-16">
+      <div className="py-6 lg:py-4 ">
+        <div className=" p-0 lg:pr-8 flex items-center justify-between flex-row">
+          <div className="w-full lg:w-2/3 flex flex-col p-4">
             <p className="text-red02 text-center text-4xl font-bold">
               About Me
             </p>
-            <div className="overflow-y-auto  flex hid h-full flex-col">
+            <div className="flex flex-col">
               {body}
               {/* {parse(replaceFonts(body))} */}
             </div>
