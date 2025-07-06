@@ -5,9 +5,9 @@ import router from "next/router";
 import Footer from "./Footer";
 
 function TopMenu({
-  ogtype = "Presonal Profile",
-  subtitle = "Sebuah situs web Profil pribadi dari Yudian Nanda Malik ",
-  title = "karyayudi.id - " + subtitle,
+  ogtype = "website",
+  subtitle = "Sebuah situs web Profil pribadi dari Yudian  Malik ",
+  title = "karyayudi.my.id - " + subtitle,
   desc = "Situs Personal, Untuk Memperkenalkan siapa Yudian Malik.",
   image = "/thumnail.png",
   keywords = "yudian, malik, yudian malik, yudi, karya yudi, next karya yudi, karyayudi.id, pemrograman, laravel, nextjs, reactjs, tailwind, petugas partai,",
@@ -28,10 +28,7 @@ function TopMenu({
 
         <link rel="canonical" href="https://karyayudi.my.id" />
 
-        <meta
-          property="og:url"
-          content={"https://karyayudi.vercel.app/"}
-        ></meta>
+        <meta property="og:url" content={"https://karyayudi.my.id"}></meta>
         <meta property="og:title" content={title}></meta>
         <meta property="og:description" content={desc}></meta>
         <meta property="og:image" content={image}></meta>

@@ -19,7 +19,7 @@ function Footer() {
             <p className="text-putih ml-4">Call Me</p>
           </div>
           <p className="text-putih">
-            karyayudi.id © {new Date().getFullYear()}
+            karyayudi.my.id © {new Date().getFullYear()}
           </p>
         </div>
       </div>
