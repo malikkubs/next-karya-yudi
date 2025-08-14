@@ -20,6 +20,7 @@ interface Data {
   myprojects: DatDqwertya2[];
 }
 const DataJson: Data[] = require("../json/home.json");
+const PrjJson: any[] = require("../json/myprojects.json");
 
 function Home() {
   const [text, setText] = useState("");
@@ -153,7 +154,7 @@ function Home() {
               <div className="py-6 lg:py-4 h-full">
                 <div className="h-full flex flex-col">
                   <div className="w-full h-full flex flex-col  ">
-                    <p className="text-putih text-center p-3 text-4xl font-bold">
+                    <p className="text-red02 text-center p-3 text-4xl font-bold bg-white bg-opacity-85 rounded-lg mx-2">
                       My Project
                     </p>
 
@@ -162,7 +163,7 @@ function Home() {
                         {dataHome[0]?.myprojects?.map((data, index) => (
                           <div
                             key={index}
-                            className="p-2 lg:p-3 w-1/2 lg:w-1/4"
+                            className="p-2 lg:p-3 w-1/2 lg:w-1/5"
                             onClick={() => dataDetailOpen(index)}
                           >
                             <CardProjects
@@ -172,6 +173,20 @@ function Home() {
                               logo={data.logo}
                             />
                           </div>
+                        ))}
+                        {PrjJson.map((x) => (
+                          <a
+                            href={`/project/${x.project}`}
+                            key={1}
+                            className="p-2 lg:p-3 w-1/2 lg:w-1/5"
+                          >
+                            <CardProjects
+                              key={1}
+                              title={x.nameProject}
+                              status={"on going"}
+                              logo={x.logo}
+                            />
+                          </a>
                         ))}
                       </div>
                     </div>

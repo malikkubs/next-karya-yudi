@@ -32,8 +32,8 @@
         "logo": "/img-project/kuno.jpg",
         "nameProject": "Kunoid",
         "des": "<p>kuno.id Situs Restorasi, Marketplace, dan Forum Mobil Kuno & Klasik Pertama di Indonesia. saya kerjakan karena saya bekerja di sebuah startup di semarang. Project tersebut lanjutan dari karyawan sebelumnya. Saya Melanjutkan dibidang Frontend</p><a href='https://kuno.id/' target='_blank'>Kunjungi Website Klik Disini</a>",
-        "status": "onGoing",
-        "tahun": "2020 - Now",
+        "status": "Complated",
+        "tahun": "2020 - 2024",
         "tag": [
           "NextJs",
           "ReactJs",
@@ -43,15 +43,6 @@
           "Typescript"
         ]
       },
-      {
-        "logo": "/img-project/cashire.png",
-        "nameProject": "Cashire App",
-        "des": "<p>Cashire App adalah mesin kasir digital untuk Mamak saya yang tengah jualan di toko kelontontong dan di bantu suaminya maupun anaknya akan tetapi harganya yang masih di tulis sebuah kertas secara manual. Membuat sangat tidak effektif ketika ada kenaikan harga,dan item yang sudah sangan banyak. Jadi saya membuat cahire app dengan fitur saat kita scen barcode harga akan tampil di layar.</p> ",
-        "status": "ComingSoon",
-        "tahun": "-",
-        "tag": ["ReactNative", "Laravel", "NodeJs", "Typescript"]
-      },
-
       {
         "logo": "/img-project/logo-game.png",
         "nameProject": "Zombie Game",
@@ -77,12 +68,12 @@
         "tag": ["NextJs", "ReactJs", "TillwindCss", "NodeJs", "Typescript"]
       },
       {
-        "logo": "/img-project/jokocomic.jpg",
-        "nameProject": "jokocomic.id",
-        "des": "<p>jokocomic.id adalah sebuah website yang akan saya buat untuk membaca comic buatan Indonesia secara berlangganan, untuk meningkatkan Industri Kreatif yang lebih sehat. Kenapa harus Sehat industri akan bertumbuh saat pembaca, penikmat dan pembuat karya saling menghargai tanpa adanya pembajakan.</p>",
+        "logo": "/img-project/cashire.png",
+        "nameProject": "Cashire App",
+        "des": "<p>Cashire App adalah mesin kasir digital untuk Mamak saya yang tengah jualan di toko kelontontong dan di bantu suaminya maupun anaknya akan tetapi harganya yang masih di tulis sebuah kertas secara manual. Membuat sangat tidak effektif ketika ada kenaikan harga,dan item yang sudah sangan banyak. Jadi saya membuat cahire app dengan fitur saat kita scen barcode harga akan tampil di layar.</p> ",
         "status": "ComingSoon",
         "tahun": "-",
-        "tag": ["NextJs", "ReactJs", "TillwindCss", "NodeJs", "Typescript"]
+        "tag": ["ReactNative", "Laravel", "NodeJs", "Typescript"]
       }
     ]
   }

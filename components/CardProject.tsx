@@ -3,7 +3,7 @@ import Image from "next/image";
 function CardProjects({ logo, title, status }: any) {
   return (
     <>
-      <div className=" bg-putih rounded-lg p-4">
+      <div className=" bg-white bg-opacity-85 rounded-lg p-4">
         <div style={{ paddingBottom: "100%" }} className="relative">
           <Image
             alt="project"
