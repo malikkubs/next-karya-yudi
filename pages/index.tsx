@@ -130,7 +130,7 @@ function Home() {
                     </p>
                   </div>
                   <p className="text-red02 text-xl pt-3 line-clamp">
-                    Pelamanun yang suka mengubah secangkir kopi menjadi sesuatu
+                    Pelamun yang suka mengubah secangkir kopi menjadi sesuatu
                     karya yang menarik. Memiliki kreatifitas yang bisa
                     diwujudkan, bukan hanya angan angan.
                   </p>
@@ -224,3 +224,4 @@ function Home() {
 }
 
 export default Home;
+
