@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { useEffect, useState } from "react";
 import Button, { Button2 } from "../components/Button";
 import TopMenu from "../components/TopMenu";
@@ -110,10 +110,10 @@ function Home() {
                   style={{ paddingBottom: "100%" }}
                   className="relative w-full"
                 >
-                  <Image
+                  <img
                     className="w-full h-full absolute bg-red inset-0 object-contain rounded-full"
                     src={"/file.png"}
-                    layout="fill"
+                    // layout="fill"
                     alt="seoarang sedang menunjukan kedua ibu jari tanganya"
                   />
                 </div>

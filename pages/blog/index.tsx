@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Prism from "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
-import "prismjs/components/prism-javascript";
-import "prismjs/components/prism-dart";
 
 import APINew from "../../utils/Api";
 import dayjs from "dayjs";
