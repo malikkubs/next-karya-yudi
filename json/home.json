@@ -1,6 +1,6 @@
 [
   {
-    "abaout": "<p className='text-red02 text-xl pt-3'>Pelamanun yang suka mengubah secangkir kopi menjadi sesuatu karya yang menarik. Memiliki kreatifitas yang bisa diwujudkan, bukan hanya angan angan.</p><p className='text-red02 text-xl pt-3'>Pemuda bernama lengkap Yudian Nanda Malik, memiliki kemampuan menulis dan membaca bahasa pemrograman website dan aplikasi web secara alami. menempuh pendidikan sekolah menengah kejuaruan selama tiga tahun di kejuruan rekayasa perangkat lunak dan melanjutkan tiga tahun program studi diploma tiga di kejuruan pemrograman.</p><p className='text-red02 text-xl pt-3'>Bahasa Pemrograman yang dikuasai salah satu, tiga halnya yaitu PHP, JavaScript, TypeScript. serta dapat mengunakan framework diantaranya, Laravel, ReactJs, NextJs, ReactNative, Flutter. Serta dapat Bekerja sama tim melalui Github.</p><p className='text-red02 text-xl pt-3'>Project yang sudah di kerjakan serta project yang sudah pernah di buat dapat di kunjungi di halaman MyProjects disitus ini. Sekian Perkenalan dari saya semoga kita bisa bekerja sama untuk membuat karya yang fantastis.</p>",
+    "abaout": "<p className='text-red02 text-xl pt-3'>Pelamun yang suka mengubah secangkir kopi menjadi sesuatu karya yang menarik. Memiliki kreatifitas yang bisa diwujudkan, bukan hanya angan angan.</p><p className='text-red02 text-xl pt-3'>Pemuda bernama lengkap Yudian Nanda Malik, memiliki kemampuan menulis dan membaca bahasa pemrograman website dan aplikasi web secara alami. menempuh pendidikan sekolah menengah kejuaruan selama tiga tahun di kejuruan rekayasa perangkat lunak dan melanjutkan tiga tahun program studi diploma tiga di kejuruan pemrograman.</p><p className='text-red02 text-xl pt-3'>Bahasa Pemrograman yang dikuasai salah satu, tiga halnya yaitu PHP, JavaScript, TypeScript. serta dapat mengunakan framework diantaranya, Laravel, ReactJs, NextJs, ReactNative, Flutter. Serta dapat Bekerja sama tim melalui Github.</p><p className='text-red02 text-xl pt-3'>Project yang sudah di kerjakan serta project yang sudah pernah di buat dapat di kunjungi di halaman MyProjects disitus ini. Sekian Perkenalan dari saya semoga kita bisa bekerja sama untuk membuat karya yang fantastis.</p>",
     "myskill": [
       { "logo": "logo", "title": "Laravel" },
       { "logo": "logo", "title": "ReactJs" },
@@ -78,3 +78,4 @@
     ]
   }
 ]
+

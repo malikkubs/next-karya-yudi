@@ -98,7 +98,7 @@ export default function Project(data) {
         ) : (
           data_a.map((x) => (
             <div className=" w-full max-w-full prose-base prose no-select shadow-2xl p-4 my-4 bg-white rounded-xl">
-              {x?.thumbnail != "https://api.karyayudi.my.id/" && (
+              {x?.thumbnail != "https://api.karyayudi.my.id/" && x?.thumbnail != "https://cdn-images-1.medium.com/v2/resize:fit:1000/1*ruym7QeT_aYyq_wO8E8bvw.jpeg" && (
                 <img className="aspect-video w-full m-0" src={x?.thumbnail} />
               )}
               <div className="flex justify-between items-center">
