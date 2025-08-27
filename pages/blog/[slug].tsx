@@ -9,7 +9,7 @@ import APINew from "../../utils/Api";
 import dayjs from "dayjs";
 import TopMenu from "../../components/TopMenu";
 
-export default function blog(data) {
+export default function blog() {
   const router = useRouter();
   const { slug } = router.query;
   const [data_a, setData_a] = useState<any>();
@@ -77,7 +77,7 @@ export default function blog(data) {
   }, [data_a]);
 
   useEffect(() => {
-    console.log("asdcasdc", data.data);
+    // console.log("asdcasdc", data.data);
 
     if (slug) {
       data_tutrial(slug);
@@ -86,9 +86,9 @@ export default function blog(data) {
   return (
     <TopMenu
       ogtype="article"
-      image={data.data.thumbnail}
-      subtitle={data.data.title}
-      desc={cleanContent(data.data.article)}
+      image={data_a.data.thumbnail}
+      subtitle={data_a.data.title}
+      desc={cleanContent(data_a.data.article)}
     >
       <div className="px-4 pt-16 w-full lg:w-6/12 mx-auto">
         {!data_a ? (
@@ -119,25 +119,25 @@ export default function blog(data) {
   );
 }
 
-export async function getServerSideProps(context: any) {
-  const slug = context.query.slug || "";
-  try {
-    const res = await fetch(
-      `https://api.karyayudi.my.id/api/gassa-ky/tutorial?publish=${slug}`
-    );
-    const data = await res.json();
-    console.log("adddsc", data);
+// export async function getServerSideProps(context: any) {
+//   const slug = context.query.slug || "";
+//   try {
+//     const res = await fetch(
+//       `https://api.karyayudi.my.id/api/gassa-ky/tutorial?publish=${slug}`
+//     );
+//     const data = await res.json();
+//     console.log("adddsc", data);
 
-    return {
-      props: {
-        data: data.data,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        data: [],
-      },
-    };
-  }
-}
+//     return {
+//       props: {
+//         data: data.data,
+//       },
+//     };
+//   } catch (error) {
+//     return {
+//       props: {
+//         data: [],
+//       },
+//     };
+//   }
+// }
