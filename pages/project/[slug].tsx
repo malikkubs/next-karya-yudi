@@ -85,10 +85,11 @@ export default function Project(data) {
   }, [router.query, slug]);
   return (
     <TopMenu
-      ogtype="article"
-      image={data.data.thumbnail}
-      subtitle={data.data.title}
+      ogtype="website"
+      title={"karyayudi.my.id - " + data.data.title}
       desc={cleanContent(data.data.article)}
+      image={data.data.thumbnail}
+      keywords="flutter, svelte, flame, pemrograman, coding, developer, aplikasi mobile, web development, game development, dart, javascript, frontend, backend, framework, tutorial flutter, belajar svelte, belajar flame, next karya yudi, karya yudi, karyayudi.id, yudian malik"
     >
       <div className="px-4 pt-16 w-full lg:w-6/12 mx-auto">
         {!data_a ? (
@@ -98,9 +99,11 @@ export default function Project(data) {
         ) : (
           data_a.map((x) => (
             <div className=" w-full max-w-full prose-base prose no-select shadow-2xl p-4 my-4 bg-white rounded-xl">
-              {x?.thumbnail != "https://api.karyayudi.my.id/" && x?.thumbnail != "https://cdn-images-1.medium.com/v2/resize:fit:1000/1*ruym7QeT_aYyq_wO8E8bvw.jpeg" && (
-                <img className="aspect-video w-full m-0" src={x?.thumbnail} />
-              )}
+              {x?.thumbnail != "https://api.karyayudi.my.id/" &&
+                x?.thumbnail !=
+                  "https://cdn-images-1.medium.com/v2/resize:fit:1000/1*ruym7QeT_aYyq_wO8E8bvw.jpeg" && (
+                  <img className="aspect-video w-full m-0" src={x?.thumbnail} />
+                )}
               <div className="flex justify-between items-center">
                 <p className="m-0 whitespace-nowrap  text-xs lg:text-base">
                   {x?.created_at &&

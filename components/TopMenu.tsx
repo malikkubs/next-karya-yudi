@@ -4,15 +4,7 @@ import { useState } from "react";
 import router from "next/router";
 import Footer from "./Footer";
 
-function TopMenu({
-  ogtype = "website",
-  subtitle = "Sebuah situs web Profil pribadi dari Yudian  Malik ",
-  title = "karyayudi.my.id - " + subtitle,
-  desc = "Situs Personal, Untuk Memperkenalkan siapa Yudian Malik.",
-  image = "/thumnail.png",
-  keywords = "yudian, malik, yudian malik, yudi, karya yudi, next karya yudi, karyayudi.id, pemrograman, laravel, nextjs, reactjs, tailwind, petugas partai,",
-  children,
-}: any) {
+function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => setIsOpen(!isOpen);

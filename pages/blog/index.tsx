@@ -42,7 +42,13 @@ export default function blog() {
     data_tutrial();
   }, []);
   return (
-    <TopMenu subtitle="blog">
+    <TopMenu
+      ogtype="website"
+      title="karyayudi.my.id - blog"
+      desc="Situs Personal, Untuk Memperkenalkan siapa Yudian Malik."
+      image="/thumnail.png"
+      keywords="flutter, svelte, flame, pemrograman, coding, developer, aplikasi mobile, web development, game development, dart, javascript, frontend, backend, framework, tutorial flutter, belajar svelte, belajar flame, next karya yudi, karya yudi, karyayudi.id, yudian malik"
+    >
       <div className="px-4 pt-16 container  lg:w-11/12 w-full mx-auto">
         <p className=" text-center p-3 text-4xl font-bold">Blog</p>{" "}
         {(!data_a || (Array.isArray(data_a) && data_a.length === 0)) && (

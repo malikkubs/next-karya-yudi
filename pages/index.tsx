@@ -98,7 +98,14 @@ function Home() {
         onClose={() => setOpenDetail(false)}
         open={openDetail}
       />
-      <TopMenu>
+      ,
+      <TopMenu
+        ogtype="website"
+        title="karyayudi.my.id - Sebuah situs web Profil pribadi dari"
+        desc="Situs Personal, Untuk Memperkenalkan siapa Yudian Malik."
+        image="/thumnail.png"
+        keywords="yudian, malik, yudian malik, yudi, karya yudi, next karya  yudi, karyayudi.id, pemrograman, laravel, nextjs, reactjs, tailwind, petugas partai"
+      >
         <div className="w-full  scroll-smooth ">
           <section
             id="home"
@@ -224,4 +231,3 @@ function Home() {
 }
 
 export default Home;
-
