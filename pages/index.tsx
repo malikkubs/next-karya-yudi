@@ -98,7 +98,7 @@ function Home() {
         onClose={() => setOpenDetail(false)}
         open={openDetail}
       />
-      ,
+      
       <TopMenu
         ogtype="website"
         title="karyayudi.my.id - Sebuah situs web Profil pribadi dari"
@@ -231,3 +231,4 @@ function Home() {
 }
 
 export default Home;
+
