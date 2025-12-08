@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
@@ -20,18 +19,22 @@
 <url>
 <loc>https://karyayudi.my.id/blog/apa-itu-flutter-2</loc>
 <lastmod>2024-10-07T22:23:26.000000Z</lastmod>
+      <priority>0.80</priority>
 </url>
 <url>
 <loc>https://karyayudi.my.id/blog/dasar-dasar-flutter-2</loc>
 <lastmod>2024-10-09T02:21:54.000000Z</lastmod>
+      <priority>0.80</priority>
 </url>
 <url>
 <loc>https://karyayudi.my.id/blog/apakah-flutter-layak-dipelajari-di-tahun-ini</loc>
 <lastmod>2025-03-14T06:39:44.000000Z</lastmod>
+      <priority>0.80</priority>
 </url>
 <url>
 <loc>https://karyayudi.my.id/blog/flutter-vs-react-native-mana-yang-lebih-baik-untuk-dipelajari</loc>
 <lastmod>2025-03-14T06:46:07.000000Z</lastmod>
+      <priority>0.80</priority>
 </url>
 <url>
 <loc>https://karyayudi.my.id/blog/flutter-bottom-menu-panduan-lengkap-membuat-navigasi-bawah-di-aplikasi-flutter</loc>
@@ -201,6 +204,4 @@
 <loc>https://karyayudi.my.id/blog/latihan-mini-proyek-1-todo-list-sederhana-dengan-local-state</loc>
 <lastmod>2025-05-04T12:14:29.000000Z</lastmod>
 </url>
-
-
 </urlset>
