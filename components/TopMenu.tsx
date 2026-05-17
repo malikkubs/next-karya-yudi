@@ -155,17 +155,17 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
 
               <MenuList
                 onClick={() => {
-                  ga.EvenClick("/#myskill");
+                  ga.EvenClick("/blog");
                 }}
                 nameMenu="Blog"
-                href="/#blog"
+                href="/blog"
               />
               <MenuList
                 onClick={() => {
-                  ga.EvenClick("/#myprojects");
+                  ga.EvenClick("/projects");
                 }}
                 nameMenu="My Projects"
-                href="/#myprojects"
+                href="/projects"
               />
               <MenuList
                 onClick={() => {

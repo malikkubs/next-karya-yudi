@@ -5,6 +5,11 @@
     "project": "limaKy"
   },
   {
+    "logo": "/img-project/limaky.png",
+    "nameProject": "Floppy Bird",
+    "project": "floppy-bird"
+  },
+  {
     "logo": "/img-project/gassaky.png",
     "nameProject": "GassaKy",
     "project": "gassaky"
