@@ -1,0 +1,12 @@
+{
+  "home": {
+    "title": "ホーム",
+    "welcome": "アプリへようこそ！"
+  },
+  "menu": {
+    "play": "プレイ"
+  },
+  "settings": {
+    "title": "設定"
+  }
+}

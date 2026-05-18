@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome to the app!"
+  },
+  "menu": {
+    "play": "Play",
+    "option": "Option",
+    "settings": "Settings"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "description": "Select your preferred language."
+  }
+}

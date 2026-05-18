@@ -98,7 +98,7 @@ function Home() {
         onClose={() => setOpenDetail(false)}
         open={openDetail}
       />
-      
+
       <TopMenu
         ogtype="website"
         title="karyayudi.my.id - Sebuah situs web Profil pribadi dari"
@@ -181,6 +181,16 @@ function Home() {
                             />
                           </div>
                         ))}
+                        <a
+                          href={`/project/games`}
+                          className="p-2 lg:p-3 w-1/2 lg:w-1/5"
+                        >
+                          <CardProjects
+                            title="Games"
+                            status="keep processing"
+                            logo="/img-project/project-management.png"
+                          />
+                        </a>
                         {PrjJson.map((x) => (
                           <a
                             href={`/project/${x.project}`}
@@ -231,4 +241,3 @@ function Home() {
 }
 
 export default Home;
-
