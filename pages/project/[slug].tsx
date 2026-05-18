@@ -9,8 +9,8 @@ import APINew from "../../utils/Api";
 import dayjs from "dayjs";
 import TopMenu from "../../components/TopMenu";
 
+const PrjJson: any[] = require("../../json/myprojects.json");
 export default function Project(data) {
-  const PrjJson: any[] = require("../json/myprojects.json");
   const router = useRouter();
   const { slug } = router.query;
   const [data_a, setData_a] = useState<any>();
