@@ -10,6 +10,7 @@ import dayjs from "dayjs";
 import TopMenu from "../../components/TopMenu";
 
 export default function Project(data) {
+  const PrjJson: any[] = require("../json/myprojects.json");
   const router = useRouter();
   const { slug } = router.query;
   const [data_a, setData_a] = useState<any>();
@@ -88,7 +89,7 @@ export default function Project(data) {
       ogtype="website"
       title={"karyayudi.my.id - " + data.data[0].title}
       desc={cleanContent(data.data[0].article)}
-      image={data.data[0].thumbnail}
+      image={PrjJson.find((item) => item.project === slug)?.logo}
       keywords="flutter, svelte, flame, pemrograman, coding, developer, aplikasi mobile, web development, game development, dart, javascript, frontend, backend, framework, tutorial flutter, belajar svelte, belajar flame, next karya yudi, karya yudi, karyayudi.id, yudian malik"
     >
       {/* <pre>{JSON.stringify(data.data[0].title, null, 2)}</pre> */}
