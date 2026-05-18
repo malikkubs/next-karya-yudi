@@ -24,20 +24,20 @@ export default function Project(data) {
           development, dan koleksi project kreatif yang dibuat untuk web maupun
           platform digital lainnya.
         </p>
-        <div className="w-full flex flex-wrap">
-          <a
-            href={`/project/games/floppy-bird`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 lg:p-3 w-1/2 lg:w-1/5"
-          >
-            <CardProjects
-              title="Games"
-              status="keep processing"
-              logo="/img-project/project-management.png"
-            />
-          </a>
-        </div>
+      </div>
+      <div className="w-full min-h-screen flex flex-wrap">
+        <a
+          href={`/project/games/floppy-bird`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 lg:p-3 w-1/2 lg:w-1/5"
+        >
+          <CardProjects
+            title="Games"
+            status="keep processing"
+            logo="/img-project/project-management.png"
+          />
+        </a>
       </div>
     </TopMenu>
   );
