@@ -86,9 +86,9 @@ export default function Project(data) {
   return (
     <TopMenu
       ogtype="website"
-      title={"karyayudi.my.id - " + data.data.title}
-      desc={cleanContent(data.data.article)}
-      image={data.data.thumbnail}
+      title={"karyayudi.my.id - " + data.title}
+      desc={cleanContent(data.article)}
+      image={data.thumbnail}
       keywords="flutter, svelte, flame, pemrograman, coding, developer, aplikasi mobile, web development, game development, dart, javascript, frontend, backend, framework, tutorial flutter, belajar svelte, belajar flame, next karya yudi, karya yudi, karyayudi.id, yudian malik"
     >
       <pre>{JSON.stringify(data, null, 2)}</pre>
