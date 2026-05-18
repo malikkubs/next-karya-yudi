@@ -91,6 +91,7 @@ export default function Project(data) {
       image={data.data.thumbnail}
       keywords="flutter, svelte, flame, pemrograman, coding, developer, aplikasi mobile, web development, game development, dart, javascript, frontend, backend, framework, tutorial flutter, belajar svelte, belajar flame, next karya yudi, karya yudi, karyayudi.id, yudian malik"
     >
+      <pre>{JSON.stringify(data, null, 2)}</pre>
       <div className="px-4 pt-16 w-full lg:w-6/12 mx-auto">
         {!data_a ? (
           <div className="flex justify-center items-center h-screen">
