@@ -164,7 +164,7 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
                 onClick={() => {
                   ga.EvenClick("/projects");
                 }}
-                nameMenu="My Projects"
+                nameMenu="Projects"
                 href="/projects"
               />
               <MenuList
@@ -173,13 +173,6 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
                 }}
                 nameMenu="About Me"
                 href="/#about-me"
-              />
-              <MenuList
-                onClick={() => {
-                  ga.EvenClick("GassaKy");
-                }}
-                nameMenu="GassaKy"
-                href="https://gassaky.web.id/"
               />
             </div>
           </div>
@@ -210,28 +203,23 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
                   toggleDrawer();
                 }}
                 nameMenu="Blog"
-                href="/#blog"
+                href="/blog"
               />
               <MenuList
                 onClick={() => {
-                  ga.EvenClick("/#myprojects");
+                  ga.EvenClick("/projects");
                   toggleDrawer();
                 }}
-                nameMenu="My Projects"
-                href="/#myprojects"
+                nameMenu="Projects"
+                href="/projects"
               />
               <MenuList
                 onClick={() => {
                   ga.EvenClick("/#about-me");
                   toggleDrawer();
                 }}
-                nameMenu="About Me"
+                nameMenu="About"
                 href="/#about-me"
-              />
-              <MenuList
-                onClick={() => ga.EvenClick("GassaKy")}
-                nameMenu="GassaKy"
-                href="https://gassaky.web.id/"
               />
             </div>
           </div>
