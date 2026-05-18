@@ -25,19 +25,22 @@ export default function Project(data) {
           platform digital lainnya.
         </p>
       </div>
-      <div className="w-full min-h-screen flex flex-wrap">
-        <a
-          href={`/project/games/floppy-bird`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2 lg:p-3 w-1/2 lg:w-1/5"
-        >
-          <CardProjects
-            title="Games"
-            status="keep processing"
-            logo="/img-project/project-management.png"
-          />
-        </a>
+
+      <div className="container h-16 mx-4 lg:mx-auto w-11/12 flex-row flex justify-between items-center">
+        <div className="w-full min-h-screen flex flex-wrap">
+          <a
+            href={`/project/game/floppy-bird`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 lg:p-3 w-1/2 lg:w-1/5"
+          >
+            <CardProjects
+              title="Games"
+              status="keep processing"
+              logo="/img-project/project-management.png"
+            />
+          </a>
+        </div>
       </div>
     </TopMenu>
   );
