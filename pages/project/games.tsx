@@ -35,8 +35,8 @@ export default function Project(data) {
             className="p-2 lg:p-3 w-1/2 lg:w-1/5"
           >
             <CardProjects
-              title="Games"
-              status="keep processing"
+              title="Floppy Bird"
+              status="done"
               logo="/img-project/project-management.png"
             />
           </a>
