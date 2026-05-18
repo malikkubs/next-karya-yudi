@@ -15,19 +15,20 @@ export default function Project(data) {
       image="/img-project/project-management.png"
       keywords="flutter, svelte, flame, pemrograman, coding, developer, aplikasi mobile, web development, game development, dart, javascript, frontend, backend, framework, tutorial flutter, belajar svelte, belajar flame, next karya yudi, karya yudi, karyayudi.id, yudian malik"
     >
-      <div className="px-4 pt-16 w-full lg:w-6/12 mx-auto">
-        <p>
-          Karyayudi.my.id – Project Games Release adalah website portfolio game
-          developer milik Yudian Malik yang menampilkan berbagai game rilisan,
-          project game indie, eksperimen gameplay, serta proses pengembangan
-          game karya Yudi. Platform ini menjadi tempat showcase game, update
-          development, dan koleksi project kreatif yang dibuat untuk web maupun
-          platform digital lainnya.
-        </p>
-      </div>
+      <div className="container min-h-svh mx-4 lg:mx-auto w-11/12 flex-col flex">
+        <div className="h-20" />
+        <div className="px-4 w-full lg:w-6/12 mx-auto shadow-2xl p-4 my-4 bg-white rounded-xl">
+          <p>
+            <b>Karyayudi.my.id</b> – Project Games Release adalah website
+            portfolio game developer milik Yudian Malik yang menampilkan
+            berbagai game rilisan, project game indie, eksperimen gameplay,
+            serta proses pengembangan game karya Yudi. Platform ini menjadi
+            tempat showcase game, update development, dan koleksi project
+            kreatif yang dibuat untuk web maupun platform digital lainnya.
+          </p>
+        </div>
 
-      <div className="container h-16 mx-4 lg:mx-auto w-11/12 flex-row flex justify-between items-center">
-        <div className="w-full min-h-screen flex flex-wrap">
+        <div className="w-full  flex flex-wrap">
           <a
             href={`/project/game/floppy-bird`}
             target="_blank"
@@ -37,7 +38,7 @@ export default function Project(data) {
             <CardProjects
               title="Floppy Bird"
               status="done"
-              logo="/img-project/project-management.png"
+              logo="/img-project/logo_floppy_bird.png"
             />
           </a>
         </div>

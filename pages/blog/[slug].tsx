@@ -46,7 +46,7 @@ export default function blog(data) {
     // Hapus <img>, <iframe>, <video> pakai regex
     const cleaned = content?.replace(
       /<img[^>]*>|<iframe[^>]*>.*?<\/iframe>|<video[^>]*>.*?<\/video>/gi,
-      ""
+      "",
     );
 
     // Hapus semua tag HTML yang tersisa
@@ -103,7 +103,7 @@ export default function blog(data) {
             <div className="loader"></div>
           </div>
         ) : (
-          <div className=" w-full max-w-full prose-base prose no-select">
+          <div className=" w-full max-w-full prose-base prose no-select shadow-2xl p-4 my-4 bg-white rounded-xl">
             <img className="aspect-video w-full m-0" src={data_a?.thumbnail} />
             <div className="flex justify-between items-center">
               <p className="m-0">
@@ -130,7 +130,7 @@ export async function getServerSideProps(context: any) {
   const slug = context.query.slug || "";
   try {
     const res = await fetch(
-      `https://api.karyayudi.my.id/api/gassa-ky/tutorial?publish=${slug}`
+      `https://api.karyayudi.my.id/api/gassa-ky/tutorial?publish=${slug}`,
     );
     const data = await res.json();
     console.log("adddsc", data);
