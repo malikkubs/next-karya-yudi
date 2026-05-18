@@ -46,7 +46,7 @@ export default function Project(data) {
     // Hapus <img>, <iframe>, <video> pakai regex
     const cleaned = content?.replace(
       /<img[^>]*>|<iframe[^>]*>.*?<\/iframe>|<video[^>]*>.*?<\/video>/gi,
-      ""
+      "",
     );
 
     // Hapus semua tag HTML yang tersisa
@@ -130,7 +130,7 @@ export async function getServerSideProps(context: any) {
   const slug = context.query.slug || "";
   try {
     const res = await fetch(
-      `https://api.karyayudi.my.id/api/gassa-ky/tutorial?publish=${slug}`
+      `https://api.karyayudi.my.id/api/v2/gassaky/category/${slug}`,
     );
     const data = await res.json();
     console.log("adddsc", data);
