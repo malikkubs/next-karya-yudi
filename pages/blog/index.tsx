@@ -12,7 +12,7 @@ export default function blog() {
   const { slug } = router.query;
   const [data_a, setData_a] = useState([]);
 
-  const [lang, setLang] = useState("en-US");
+  const [lang, setLang] = useState();
 
   useEffect(() => {
     const savedLang = Cookies.get("language");
@@ -26,7 +26,7 @@ export default function blog() {
       // Jika cookie sudah ada
       setLang(savedLang);
     }
-  }, []);
+  }, [lang]);
   function data_tutrial() {
     APINew.get(`/karyayudi/blog?lang_code=${lang}`, {})
       .then((res) => {
