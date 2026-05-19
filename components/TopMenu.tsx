@@ -255,7 +255,10 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
                       {languages.map((item) => (
                         <button
                           key={item.code}
-                          onClick={() => changeLanguage(item.code)}
+                          onClick={() => {
+                            changeLanguage(item.code);
+                            window.location.reload();
+                          }}
                           className={`flex items-center justify-center rounded-xl p-2 transition hover:bg-gray-100 ${
                             lang === item.code ? "bg-gray-100" : ""
                           }`}
