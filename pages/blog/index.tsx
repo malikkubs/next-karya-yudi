@@ -11,20 +11,19 @@ export default function blog() {
   const router = useRouter();
   const { slug } = router.query;
   const [data_a, setData_a] = useState([]);
-
+  // Ambil cookie saat pertama load
   const [lang, setLang] = useState();
-
   useEffect(() => {
     const savedLang = Cookies.get("language");
 
-    // Jika cookie belum ada
-    if (!savedLang) {
-      Cookies.set("language", lang, {
-        expires: 365,
-      });
-    } else {
-      // Jika cookie sudah ada
+    if (savedLang) {
       setLang(savedLang);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (lang) {
+      data_tutrial();
     }
   }, [lang]);
   function data_tutrial() {
