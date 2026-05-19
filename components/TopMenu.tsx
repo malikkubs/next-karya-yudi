@@ -1,6 +1,7 @@
 import Head from "next/head";
 import * as ga from "../utils/google_analitycs";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Cookies from "js-cookie";
 import router from "next/router";
 import Footer from "./Footer";
 
@@ -8,7 +9,69 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => setIsOpen(!isOpen);
+  const languages = [
+    {
+      code: "id-ID",
+      name: "Indonesia",
+      flag: "/lang/icon/id-id.svg",
+    },
+    {
+      code: "en-US",
+      name: "English",
+      flag: "/lang/icon/en-us.svg",
+    },
+    {
+      code: "jp-JP",
+      name: "日本語",
+      flag: "/lang/icon/jp-jp.svg",
+    },
+  ];
+  const [lang, setLang] = useState("en-EN");
+  const [open, setOpen] = useState(false);
 
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const savedLang = Cookies.get("language");
+
+    // Jika cookie belum ada
+    if (!savedLang) {
+      Cookies.set("language", lang, {
+        expires: 365,
+      });
+    } else {
+      // Jika cookie sudah ada
+      setLang(savedLang);
+    }
+  }, []);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  const changeLanguage = (code: string) => {
+    setLang(code);
+
+    Cookies.set("language", code, {
+      expires: 365,
+    });
+
+    setOpen(false);
+  };
+
+  const currentLanguage =
+    languages.find((item) => item.code === lang) || languages[0];
   return (
     <>
       <Head>
@@ -144,36 +207,70 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
                 </button>
               </div>
             </div>
-            <div className="flex-row hidden md:flex">
-              <MenuList
-                onClick={() => {
-                  ga.EvenClick("/#home");
-                }}
-                nameMenu="Home"
-                href="/#home"
-              />
+            <div className="flex gap-3">
+              <div className="flex-row hidden md:flex">
+                <MenuList
+                  onClick={() => {
+                    ga.EvenClick("/#home");
+                  }}
+                  nameMenu="Home"
+                  href="/#home"
+                />
 
-              <MenuList
-                onClick={() => {
-                  ga.EvenClick("/blog");
-                }}
-                nameMenu="Blog"
-                href="/blog"
-              />
-              <MenuList
-                onClick={() => {
-                  ga.EvenClick("/projects");
-                }}
-                nameMenu="Projects"
-                href="/projects"
-              />
-              <MenuList
-                onClick={() => {
-                  ga.EvenClick("/#about-me");
-                }}
-                nameMenu="About Me"
-                href="/#about-me"
-              />
+                <MenuList
+                  onClick={() => {
+                    ga.EvenClick("/blog");
+                  }}
+                  nameMenu="Blog"
+                  href="/blog"
+                />
+                <MenuList
+                  onClick={() => {
+                    ga.EvenClick("/projects");
+                  }}
+                  nameMenu="Projects"
+                  href="/projects"
+                />
+                <MenuList
+                  onClick={() => {
+                    ga.EvenClick("/#about-me");
+                  }}
+                  nameMenu="About Me"
+                  href="/#about-me"
+                />
+              </div>
+              {/* Button */}
+              <div className="relative">
+                <button onClick={() => setOpen(!open)}>
+                  <img
+                    src={currentLanguage.flag}
+                    alt={currentLanguage.name}
+                    className="h-6 w-6 rounded-full object-cover"
+                  />
+                </button>
+                {/* Dropdown */}
+                {open && (
+                  <div className="absolute right-0 lg:-right-9 top-12 w-20 rounded-2xl border bg-white p-2 shadow-xl">
+                    <div className="flex flex-col gap-2">
+                      {languages.map((item) => (
+                        <button
+                          key={item.code}
+                          onClick={() => changeLanguage(item.code)}
+                          className={`flex items-center justify-center rounded-xl p-2 transition hover:bg-gray-100 ${
+                            lang === item.code ? "bg-gray-100" : ""
+                          }`}
+                        >
+                          <img
+                            src={item.flag}
+                            alt={item.name}
+                            className="h-7 w-7 rounded-full object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 

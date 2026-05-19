@@ -7,6 +7,7 @@ import "prismjs/components/prism-dart";
 
 import APINew from "../../utils/Api";
 import dayjs from "dayjs";
+import Cookies from "js-cookie";
 import TopMenu from "../../components/TopMenu";
 
 const PrjJson: any[] = require("../../json/myprojects.json");
@@ -14,8 +15,24 @@ export default function Project(data) {
   const router = useRouter();
   const { slug } = router.query;
   const [data_a, setData_a] = useState<any>();
+
+  const [lang, setLang] = useState("en-EN");
+
+  useEffect(() => {
+    const savedLang = Cookies.get("language");
+
+    // Jika cookie belum ada
+    if (!savedLang) {
+      Cookies.set("language", lang, {
+        expires: 365,
+      });
+    } else {
+      // Jika cookie sudah ada
+      setLang(savedLang);
+    }
+  }, []);
   function data_tutrial(slug) {
-    APINew.get(`/v2/gassaky/category/${slug}`, {})
+    APINew.get(`/v2/gassaky/category/${slug}?lang_code=${lang}`, {})
       .then((res) => {
         setData_a(res.data);
         console.log(`jala ye ${res.data.title}`);
