@@ -88,7 +88,7 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
         <meta name="og:image" content={image}></meta>
         <meta name="keywords" content={keywords} />
         <meta name="news_keywords" content={keywords} />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
         <meta name="author" content={"Yudian Malik"} />
         <meta name="language" content="id" />
         <link
