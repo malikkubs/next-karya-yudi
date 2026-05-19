@@ -16,18 +16,11 @@ export default function Project(data) {
   const { slug } = router.query;
   const [data_a, setData_a] = useState<any>();
 
-  const [lang, setLang] = useState("en-US");
-
+  const [lang, setLang] = useState();
   useEffect(() => {
     const savedLang = Cookies.get("language");
 
-    // Jika cookie belum ada
-    if (!savedLang) {
-      Cookies.set("language", lang, {
-        expires: 365,
-      });
-    } else {
-      // Jika cookie sudah ada
+    if (savedLang) {
       setLang(savedLang);
     }
   }, []);
@@ -97,10 +90,10 @@ export default function Project(data) {
   useEffect(() => {
     console.log("asdcasdc", data.data);
 
-    if (slug) {
+    if (slug && lang) {
       data_tutrial(slug);
     }
-  }, [router.query, slug]);
+  }, [router.query, slug, lang]);
   return (
     <TopMenu
       ogtype="website"
