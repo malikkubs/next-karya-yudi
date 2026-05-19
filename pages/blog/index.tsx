@@ -29,7 +29,7 @@ export default function blog() {
   function data_tutrial() {
     APINew.get(`/karyayudi/blog?lang_code=${lang}`, {})
       .then((res) => {
-        setData_a(res.data.list_artikel);
+        setData_a(res.data);
         console.log(`jala ye ${res.data.list_artikel.reverse()}`);
       })
       .catch((err) => {
@@ -54,9 +54,6 @@ export default function blog() {
 
     return shortDescription;
   };
-  useEffect(() => {
-    data_tutrial();
-  }, []);
   return (
     <TopMenu
       ogtype="website"
