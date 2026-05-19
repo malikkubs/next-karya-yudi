@@ -31,7 +31,7 @@ export default function Project(data) {
 
         <div className="w-full h-full hid  overflow-y-auto">
           <div className="flex flex-wrap">
-            <a href={`/project/games`} className="p-2 lg:p-3 w-1/2 lg:w-1/5">
+            <a href={`/games`} className="p-2 lg:p-3 w-1/2 lg:w-1/5">
               <CardProjects
                 title="Games"
                 status="keep processing"

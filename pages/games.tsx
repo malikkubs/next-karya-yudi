@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import APINew from "../../utils/Api";
-import TopMenu from "../../components/TopMenu";
-import CardProjects from "../../components/CardProject";
+import APINew from "../utils/Api";
+import TopMenu from "../components/TopMenu";
+import CardProjects from "../components/CardProject";
 
 export default function Project(data) {
   const router = useRouter();
