@@ -26,7 +26,7 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
       flag: "/lang/icon/jp-jp.svg",
     },
   ];
-  const [lang, setLang] = useState("en-EN");
+  const [lang, setLang] = useState("en-US");
   const [open, setOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);

@@ -16,7 +16,7 @@ export default function Project(data) {
   const { slug } = router.query;
   const [data_a, setData_a] = useState<any>();
 
-  const [lang, setLang] = useState("en-EN");
+  const [lang, setLang] = useState("en-US");
 
   useEffect(() => {
     const savedLang = Cookies.get("language");
