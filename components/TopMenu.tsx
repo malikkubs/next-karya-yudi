@@ -229,13 +229,13 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
                     ga.EvenClick("/projects");
                   }}
                   nameMenu="Projects"
-                  href="/projects"
+                  href="/project"
                 />
                 <MenuList
                   onClick={() => {
                     ga.EvenClick("/#about-me");
                   }}
-                  nameMenu="About Me"
+                  nameMenu="About "
                   href="/#about-me"
                 />
               </div>

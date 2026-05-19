@@ -25,7 +25,7 @@ export default function Project(data) {
     }
   }, []);
   function data_tutrial(slug) {
-    APINew.get(`/v2/gassaky/category/${slug}?lang_code=${lang}`, {})
+    APINew.get(`/karyayudi/project/${slug}?lang_code=${lang}`, {})
       .then((res) => {
         setData_a(res.data);
         console.log(`jala ye ${res.data.title}`);
@@ -97,12 +97,12 @@ export default function Project(data) {
   return (
     <TopMenu
       ogtype="website"
-      title={"karyayudi.my.id - " + data.data[0].title}
-      desc={cleanContent(data.data[0].article)}
+      title={"karyayudi.my.id - " + data.data[0]?.title}
+      desc={cleanContent(data.data[0]?.article)}
       image={PrjJson.find((item) => item.project === slug)?.logo}
       keywords="flutter, svelte, flame, pemrograman, coding, developer, aplikasi mobile, web development, game development, dart, javascript, frontend, backend, framework, tutorial flutter, belajar svelte, belajar flame, next karya yudi, karya yudi, karyayudi.id, yudian malik"
     >
-      {/* <pre>{JSON.stringify(data.data[0].article, null, 2)}</pre> */}
+      <pre>{JSON.stringify(data.data[0]?.article, null, 2)}</pre>
       <div className="px-4 pt-16 w-full lg:w-6/12 mx-auto">
         {!data_a ? (
           <div className="flex justify-center items-center h-screen">
