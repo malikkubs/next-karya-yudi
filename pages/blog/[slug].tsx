@@ -14,7 +14,7 @@ export default function blog(data) {
   const { slug } = router.query;
   const [data_a, setData_a] = useState<any>();
   function data_tutrial(slug) {
-    APINew.get(`/gassa-ky/tutorial?publish=${slug}`, {})
+    APINew.get(`/karyayudi/blog/${slug}`, {})
       .then((res) => {
         setData_a(res.data);
         console.log(`jala ye ${res.data.title}`);
@@ -130,7 +130,7 @@ export async function getServerSideProps(context: any) {
   const slug = context.query.slug || "";
   try {
     const res = await fetch(
-      `https://api.karyayudi.my.id/api/gassa-ky/tutorial?publish=${slug}`,
+      `https://api.karyayudi.my.id/api/karyayudi/blog/${slug}`,
     );
     const data = await res.json();
     console.log("adddsc", data);

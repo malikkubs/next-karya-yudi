@@ -6,12 +6,12 @@ const Sitemap = () => {};
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const HOSTNAME = "https://api.karyayudi.my.id/api";
   const BASE_URL = "https://karyayudi.my.id";
-  const article = (
-    await Axios.get(HOSTNAME + "/gassa-ky/tutorial")
-  ).data.data.list_artikel.map((a) => BASE_URL + "/blog/" + a.slug);
-  // const restoration = (await Axios.get(HOSTNAME + "/restorasi")).data.data.map(
-  //   (a) => BASE_URL + "/media/restoration/" + a.slug,
-  // );
+  const article = (await Axios.get(HOSTNAME + "/karyayudi/blog")).data.data.map(
+    (a) => BASE_URL + "/blog/" + a.slug,
+  );
+  const project = (
+    await Axios.get(HOSTNAME + "/karyayudi/project")
+  ).data.data.map((a) => BASE_URL + "/project/" + a.slug);
   const restoration = [];
 
   if (res) {
@@ -34,7 +34,7 @@ ${article
 </url>`,
   )
   .join("")}
-${restoration
+${project
   .map(
     (url) => `<url>
 <loc>${url}</loc>

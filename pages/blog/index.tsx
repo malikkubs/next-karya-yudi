@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import APINew from "../../utils/Api";
+import Cookies from "js-cookie";
 import dayjs from "dayjs";
 import TopMenu from "../../components/TopMenu";
 import { Card } from "../../components/Myskill";
@@ -10,8 +11,24 @@ export default function blog() {
   const router = useRouter();
   const { slug } = router.query;
   const [data_a, setData_a] = useState([]);
+
+  const [lang, setLang] = useState("en-US");
+
+  useEffect(() => {
+    const savedLang = Cookies.get("language");
+
+    // Jika cookie belum ada
+    if (!savedLang) {
+      Cookies.set("language", lang, {
+        expires: 365,
+      });
+    } else {
+      // Jika cookie sudah ada
+      setLang(savedLang);
+    }
+  }, []);
   function data_tutrial() {
-    APINew.get("/gassa-ky/tutorial", {})
+    APINew.get(`/karyayudi/blog?lang_code=${lang}`, {})
       .then((res) => {
         setData_a(res.data.list_artikel);
         console.log(`jala ye ${res.data.list_artikel.reverse()}`);
@@ -25,7 +42,7 @@ export default function blog() {
     // Hapus <img>, <iframe>, <video> pakai regex
     const cleaned = content?.replace(
       /<img[^>]*>|<iframe[^>]*>.*?<\/iframe>|<video[^>]*>.*?<\/video>/gi,
-      ""
+      "",
     );
 
     // Hapus semua tag HTML yang tersisa
