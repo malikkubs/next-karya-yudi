@@ -4977,7 +4977,10 @@ path_provider_linux
 path_provider_platform_interface
 path_provider_windows
 plugin_platform_interface
+<<<<<<< HEAD
 shared_preferences
+=======
+>>>>>>> cc61c8d7d7507e4456795f8a92cef8b1cb1cdcda
 shared_preferences_linux
 shared_preferences_web
 shared_preferences_windows
@@ -24221,12 +24224,19 @@ SOFTWARE.
 --------------------------------------------------------------------------------
 path_provider_android
 path_provider_foundation
+<<<<<<< HEAD
 shared_preferences_android
 shared_preferences_foundation
 shared_preferences_platform_interface
 webview_flutter
 webview_flutter_platform_interface
 webview_flutter_wkwebview
+=======
+shared_preferences
+shared_preferences_android
+shared_preferences_foundation
+shared_preferences_platform_interface
+>>>>>>> cc61c8d7d7507e4456795f8a92cef8b1cb1cdcda
 
 Copyright 2013 The Flutter Authors
 
