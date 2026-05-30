@@ -154,10 +154,7 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
         <meta property="twitter:description" content={desc}></meta>
         <meta property="twitter:image" content={image}></meta>
         <meta name="theme-color" content="#30150A" />
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-3431456264566520"
-        ></meta>
+        
 
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <meta
@@ -169,11 +166,7 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
           content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"
         />
 
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3431456264566520"
-          crossOrigin="anonymous"
-        ></script>
+        
 
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
