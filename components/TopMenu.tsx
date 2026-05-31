@@ -174,7 +174,7 @@ function TopMenu({ title, desc, ogtype, image, keywords, children }: any) {
         ></link>
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6563023551129667"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
