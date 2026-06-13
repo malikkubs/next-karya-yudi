@@ -20,7 +20,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       "public, s-maxage=3600, stale-while-revalidate=86400",
     );
     res.setHeader("Content-Type", "text/xml");
-    res.write(`<?xml version="1.0" encoding="UTF-8"?>
+    res.write(
+      `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>${BASE_URL}</loc>
@@ -67,7 +68,8 @@ ${project
 <priority>0.7</priority>
 <lastmod>2021-11-03T03:16:20.319Z</lastmod>
 </url>
-</urlset>`);
+</urlset>`.trim(),
+    );
     res.end();
   }
   return {
